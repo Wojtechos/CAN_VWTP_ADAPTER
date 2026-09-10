@@ -12,7 +12,7 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
 
 ## System Architecture Overview
 ```mermaid
-  flowchart LR
+  flowchart TD
     Power(["12V"])
     subgraph CAN Adapter
       Stepdown["Stepdown 12V to 5V"]
