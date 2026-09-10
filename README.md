@@ -34,4 +34,6 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
     CANMOD2 --> RADIO(["CAR radio"])
     LOGCONV1 --> MCU
     LOGCONV2 --> MCU
+    CANMOD1 --> LOGCONV1
+    CANMOD2 --> LOGCONV2
 ```
