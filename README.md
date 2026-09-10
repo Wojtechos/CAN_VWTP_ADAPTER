@@ -42,5 +42,5 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
 The adapter enables the radio to understand messages about the current state of ignition. Now the radio:
 1. Turns on when the ignition is turned on. 
 2. Turns off when the key is removed from the switch box.
-3. Bluetooth functionality is now enabled(Not functional when the radio was not receiving correct messages).
-4. The radio now **does not drain the car`s battery** while unused and does not turn itself off after 30 minutes.   
+3. Bluetooth functionality is now enabled (not functional when the radio was not receiving correct messages).
+4. The radio now **does not drain the car`s battery** while unused (standby mode) and does not turn itself off after 30 minutes.   
