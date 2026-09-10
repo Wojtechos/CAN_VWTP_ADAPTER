@@ -4,11 +4,7 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
 
 ### Components
 - **Radio** - RCD340G
-- **Radio CANbus protocol** - VW TP 2.0 
 - **Car** - Skoda Fabia mk2 (2008)
-- **Car CANbus protocol** - VW TP 1.6 
-<hr>
-
 - **MCU** - ESP32C3 super mini
 - **CAN module** - MCP2515
 
