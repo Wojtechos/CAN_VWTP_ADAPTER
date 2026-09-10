@@ -7,6 +7,8 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
 - **Car** - Skoda Fabia mk2 (2008)
 - **MCU** - ESP32C3 super mini
 - **CAN module** - MCP2515
+- **Logic converter** - BSS138 (5V to 3.3V and vice versa)
+- **Stepdown converter** - MP1584EN (12V to 5V)
 
 ## System Architecture Overview
 ```mermaid
