@@ -21,6 +21,6 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
     MCU --> LOGCONV2["Logic Converter"]
     LOGCONV1 --> CANMOD1["CAN module"] 
     LOGCONV2 --> CANMOD2["CAN module"]
-    CANMOD1 <-- ECU(["CAR ecu"]) 
+    CANMOD1 --> ECU(["CAR ecu"]) 
     CANMOD2 --> RADIO(["CAR radio"])
 ```
