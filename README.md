@@ -24,14 +24,18 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
       CANMOD1["CAN module"]
       CANMOD2["CAN module"] 
     end
+    subgraph CAN_IO
+      RADIO(["CAR radio"])
+      ECU(["CAR ecu"])
+    end
     Power --> Stepdown
     Stepdown --> MCU
     MCU --> LOGCONV1
     MCU --> LOGCONV2
     LOGCONV1 --> CANMOD1 
     LOGCONV2 --> CANMOD2
-    ECU(["CAR ecu"]) --> CANMOD1 
-    CANMOD2 --> RADIO(["CAR radio"])
+    ECU --> CANMOD1 
+    CANMOD2 --> RADIO
     LOGCONV1 --> MCU
     LOGCONV2 --> MCU
     CANMOD1 --> LOGCONV1
