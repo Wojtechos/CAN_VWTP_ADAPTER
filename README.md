@@ -36,6 +36,30 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
     CANMOD1 --> LOGCONV1
     CANMOD2 --> LOGCONV2
 ```
+## System Wiring
+<img width="1052" height="355" alt="schema" src="https://github.com/user-attachments/assets/d4591f84-8a66-4273-aa18-06d7d3d630cc" />
+
+## Functionality
+Turns out there was only one type of message that needed to be altered and those were the messages from ECU (with ID `0x271`) which were resetting the watchdog timer (position of the key in car's ignition). The car's ECU sends messages in format: 
+```<ID> <message>```
+where the message is in following format:
+```<first byte> 0x80```.
+Meaning the only the first byte contains the information about the position of the key.
+- `00`: The key is inserted, the first position
+- `03`: Second position of the key
+- `07`: Third position of the key
+- `87`: The engine is running
+
+The message then looks like:
+```0x271: 00 80```.
+
+All that was needed was to send the same message with different ID. VW group cars often use either `0x2c3` or `0x575` and in this case the radio expects messages with ID `0x575`. 
+
+From further analysis and experiments I found out that VW 1.6 and VW 2.0 are quite similar, because the radio understands messages about the state of the headlights out of the box. The message about the state of lights (which changes the brightness of the radio's diplay and turns on the illumination of the buttons) is sent with ID `0x635` in following format:
+```0x635: 00 FF 00```
+where only the first byte determines the intensity of the illumination, the other two bytes remain unchanged.  
+
+
 The adapter enables the radio to understand messages about the current state of ignition. Now the radio:
 1. Turns on when the ignition is turned on. 
 2. Turns off when the key is removed from the switch box.
