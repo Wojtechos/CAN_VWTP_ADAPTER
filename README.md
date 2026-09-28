@@ -1,6 +1,7 @@
 # CAN_VWTP_ADAPTER
 Adapter is meant for older VW group cars (platform PQ 25) with VW TP 1.6 CAN protocol enabling them to communicate with newer radios which use VW TP 2.0 (RCD 330/340 etc.). <br> 
 This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the format of messages and their IDs may differ from car to car (VW golf, polo etc.). <br>
+**Note:** I had no access to VW TP 1.6 nor VW TP 2.0 protocols. This solution was built based on analysis of logs sniffed from my car's CAN bus and study of [decompiled code of chinese black box CAN converter](https://github.com/unemployable/Golf-Mk5-RCD330-CAN-Filter) and experiments with the message formats. 
 
 ### Components
 - **Radio** - RCD340G
