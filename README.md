@@ -14,9 +14,7 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
 ## System Architecture Overview
 ```mermaid
   flowchart TD
-    Power(["12V"])
     subgraph CAN Adapter
-      Stepdown["Stepdown 12V to 5V"]
       MCU["ESP32C3"]
       LOGCONV1["Logic Converter"]
       LOGCONV2["Logic Converter"]
@@ -27,10 +25,6 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
       RADIO(["CAR radio"])
       ECU(["CAR ecu"])
     end
-    Power --> Stepdown
-    Stepdown --> MCU
-    Stepdown --> CANMOD1
-    Stepdown --> CANMOD2
     MCU --> LOGCONV1
     MCU --> LOGCONV2
     LOGCONV1 --> CANMOD1 
