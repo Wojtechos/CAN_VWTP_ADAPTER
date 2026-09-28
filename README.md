@@ -40,7 +40,7 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
 <img width="1052" height="355" alt="schema" src="https://github.com/user-attachments/assets/d4591f84-8a66-4273-aa18-06d7d3d630cc" />
 
 ## Functionality
-Turns out there was only one type of message that needed to be altered and those were the messages from ECU (with ID `0x271`) which were resetting the watchdog timer (position of the key in car's ignition). The car's ECU sends messages in format: 
+Turns out there was only one type of message that needed to be altered and those were the messages from ECU (with ID `0x271`) which were resetting the sleep timer (position of the key in car's ignition). The car's ECU sends messages in format: 
 ```<ID> <message>```
 where the message is in following format:
 ```<first byte> 0x80```.
