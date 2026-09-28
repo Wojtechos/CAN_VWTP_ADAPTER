@@ -28,6 +28,8 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
     end
     Power --> Stepdown
     Stepdown --> MCU
+    Stepdown --> CANMOD1
+    Stepdown --> CANMOD2
     MCU --> LOGCONV1
     MCU --> LOGCONV2
     LOGCONV1 --> CANMOD1 
