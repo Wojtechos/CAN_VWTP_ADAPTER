@@ -41,9 +41,11 @@ This bridge was specifically built for **pre-facelift Skoda Fabia 2**, so the fo
 
 ## Functionality
 Turns out there was only one type of message that needed to be altered and those were the messages from ECU (with ID `0x271`) which were resetting the sleep timer (position of the key in car's ignition). The car's ECU sends messages in format: 
-```<ID> <message>```
+```
+<ID> <message>
+```
 where the message is in following format:
-```<first byte> 0x80```.
+`<first byte> 0x80`.
 Meaning the only the first byte contains the information about the position of the key.
 - `00`: The key is inserted, the first position
 - `03`: Second position of the key
